@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
 import { useState } from "react";
+import Nav from "../components/ui/Nav";
 
 // Providers (providing Supabase, ui layout, nav-bar)
 
@@ -19,7 +20,12 @@ function MyApp({
       supabaseClient={supabase}
       initialSession={pageProps.initialSession}
     >
-      <Component {...pageProps} />
+      <div className="bg-zinc-800 text-white min-h-screen">
+        <Nav />
+        <div className="flex flex-col justify-center items-center max-w-6xl mx-auto">
+          <Component {...pageProps} />
+        </div>
+      </div>
     </SessionContextProvider>
   );
 }

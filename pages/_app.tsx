@@ -22,7 +22,7 @@ function MyApp({
     >
       <div className="bg-zinc-800 text-white min-h-screen">
         <Nav />
-        <div className="flex flex-col justify-center items-center max-w-6xl mx-auto">
+        <div className="flex flex-col justify-center items-center max-w-6xl mx-auto p-5">
           <Component {...pageProps} />
         </div>
       </div>

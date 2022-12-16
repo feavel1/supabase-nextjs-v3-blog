@@ -31,3 +31,12 @@
 .btn--third {
   @apply bg-slate-200 text-slate-900 hover:bg-slate-300 transition ease-in-out delay-100;
 }
+
+/* Input */
+.input {
+  @apply block text-sm py-3 px-4 rounded-lg w-full border outline-none;
+}
+
+.menu {
+  @apply py-2 sm:px-5 px-5 rounded-2xl shadow-xl z-20;
+}

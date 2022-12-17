@@ -20,7 +20,7 @@ function MyApp({
       supabaseClient={supabase}
       initialSession={pageProps.initialSession}
     >
-      <div className="bg-zinc-800 text-white min-h-screen">
+      <div className="bg-zinc-300 text-white min-h-screen">
         <Nav />
         <div className="flex flex-col justify-center items-center max-w-6xl mx-auto p-5">
           <Component {...pageProps} />

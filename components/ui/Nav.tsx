@@ -53,26 +53,23 @@ export default function Nav() {
               >
                 合作伙伴
               </a>
-              <a
+              <Link
                 href="/about"
                 className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 关于网站
-              </a>
+              </Link>
             </div>
 
             <div className="hidden sm:flex sm:items-center">
-              <a
+              <Link
                 href="/my-account"
                 className="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600"
               >
                 {!user ? "登录" : "账号"}
-              </a>
+              </Link>
             </div>
-            <div
-              className="sm:hidden cursor-pointer"
-              onClick={() => setShowNav(!showNav)}
-            >
+            <div className="sm:hidden cursor-pointer">
               <Link
                 href="/"
                 className="text-gray-800 text-sm font-semibold border px-2 py-2 rounded-lg bg-purple-100 hover:text-purple-600 hover:border-purple-600"
@@ -126,12 +123,12 @@ export default function Nav() {
                   关于网站
                 </a>
                 <div className="flex justify-between items-center border-t-2 pt-2">
-                  <a
+                  <Link
                     href="/my-account"
                     className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
                   >
                     登录
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

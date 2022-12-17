@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import {
   useUser,
   useSupabaseClient,
-  Session,
   useSession,
 } from "@supabase/auth-helpers-react";
 import { Database } from "../utils/database.types";
@@ -12,7 +11,6 @@ type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 export default function Account() {
   const supabase = useSupabaseClient<Database>();
   const user = useUser();
-
   const session = useSession();
 
   const [loading, setLoading] = useState(true);
@@ -86,6 +84,7 @@ export default function Account() {
 
   return (
     <div className="card card--secondary grid gap-2 mt-4">
+      <h1 className="text-3xl font-bold">我的个人信息</h1>
       <div className="form-widget">
         {/* Add to the body */}
         {/* <Avatar
@@ -147,7 +146,7 @@ export default function Account() {
       </div>
 
       <div>
-        <Link href="/create-post">
+        <Link href="/createPost">
           <button className="btn--primary btn">创建帖子</button>
         </Link>
       </div>

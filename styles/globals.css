@@ -4,7 +4,7 @@
 
 /* Card */
 .card {
-  @apply py-12 sm:px-12 px-5 rounded-2xl text-center shadow-xl z-20 w-72 sm:w-80;
+  @apply pt-5 pb-12 sm:px-12 px-5 rounded-2xl text-center shadow-xl z-20 w-72 sm:w-80;
 }
 
 .card--primary {

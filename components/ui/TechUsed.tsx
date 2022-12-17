@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-
 export default function TechUsed() {
   return (
-    <>
+    <div>
       <p className="mt-14 text-xs uppercase text-white text-center font-bold tracking-[0.3em]">
         made possible by
       </p>
@@ -62,6 +61,6 @@ export default function TechUsed() {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }

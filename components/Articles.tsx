@@ -12,7 +12,7 @@ export default function Articles() {
 
   useEffect(() => {
     getArticles();
-  }, []);
+  });
 
   const getArticles = async () => {
     try {
@@ -24,7 +24,6 @@ export default function Articles() {
       if (data != null) {
         setArticles(data);
       }
-      console.log(data);
     } catch (error: any) {
       alert(error.message);
     }

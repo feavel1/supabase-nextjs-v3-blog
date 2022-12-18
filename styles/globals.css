@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.z-index-top {
+  z-index: 999;
+}
+
 /* Card */
 .card {
   @apply pt-5 pb-12 sm:px-12 px-5 rounded-2xl text-center shadow-xl z-20 w-72 sm:w-80;

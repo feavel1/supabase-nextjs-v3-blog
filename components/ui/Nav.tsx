@@ -10,7 +10,7 @@ export default function Nav() {
   const router = useRouter();
 
   return (
-    <div className="bg-gray-100 font-sans w-full ">
+    <div className="bg-gray-100 font-sans w-full z-index-top">
       <div className="bg-white shadow">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-3">

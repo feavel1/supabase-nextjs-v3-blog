@@ -9,7 +9,7 @@ export default function ArticleCard(props: { article: any }) {
     // dd--mm--yyyy
     let time = Date.parse(article.inserted_at);
     let date = new Date(time);
-    return date.getDay() + "-" + date.getMonth() + "-" + date.getFullYear();
+    return date.toISOString().slice(0, 10);
   }
 
   return (

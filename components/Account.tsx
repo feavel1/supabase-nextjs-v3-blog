@@ -6,6 +6,7 @@ import {
 } from "@supabase/auth-helpers-react";
 import { Database } from "../utils/database.types";
 import Link from "next/link";
+import Avatar from "./ui/Avatar";
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 export default function Account() {
@@ -83,19 +84,19 @@ export default function Account() {
   }
 
   return (
-    <div className="card card--secondary grid gap-2 mt-4">
+    <div className="col-span-1 card card--secondary grid gap-2">
       <h1 className="text-3xl font-bold">我的个人信息</h1>
       <div className="form-widget">
         {/* Add to the body */}
-        {/* <Avatar
-          uid={user.id}
+        <Avatar
+          uid={user?.id}
           url={avatar_url}
           size={150}
           onUpload={(url) => {
             setAvatarUrl(url);
             updateProfile({ username, website, avatar_url: url });
           }}
-        /> */}
+        />
         {/* ... */}
       </div>
       <div>
@@ -143,12 +144,6 @@ export default function Account() {
         >
           {loading ? "加载中 ..." : "保存信息"}
         </button>
-      </div>
-
-      <div>
-        <Link href="/createPost">
-          <button className="btn--primary btn">创建帖子</button>
-        </Link>
       </div>
 
       <div>

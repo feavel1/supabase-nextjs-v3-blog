@@ -75,4 +75,4 @@ export default function CreatPost() {
   );
 }
 
-export const getServerSideProps = withPageAuth({ redirectTo: "/login" });
+export const getServerSideProps = withPageAuth({ redirectTo: "/my-account" });

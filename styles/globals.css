@@ -29,7 +29,7 @@
 }
 
 .btn--secondary {
-  @apply bg-slate-100 text-slate-900 hover:bg-slate-300 transition ease-in-out delay-100;
+  @apply bg-slate-200 text-slate-900 hover:bg-slate-300 transition ease-in-out delay-100;
 }
 
 .btn--third {

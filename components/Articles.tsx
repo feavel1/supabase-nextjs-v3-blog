@@ -1,13 +1,16 @@
-import { useUser, useSupabaseClient } from "@supabase/auth-helpers-react";
-import { useRouter } from "next/router";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useState, useEffect } from "react";
 import ArticleCard from "./ui/ArticleCard";
 
+interface article {
+  id: number;
+  title: string;
+  user_email: string;
+}
+
 export default function Articles() {
   const supabaseClient = useSupabaseClient();
-  const user = useUser();
-  const router = useRouter();
-  const [articles, setArticles] = useState<string[]>([]);
+  const [articles, setArticles] = useState<article[]>([]);
 
   useEffect(() => {
     getArticles();
@@ -29,10 +32,10 @@ export default function Articles() {
   };
 
   return (
-    <>
+    <div className="grid md:grid-cols-3 gap-2 w-full">
       {articles.map((article) => (
         <ArticleCard key={article.id} article={article} />
       ))}
-    </>
+    </div>
   );
 }

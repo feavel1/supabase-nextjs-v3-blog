@@ -1,5 +1,5 @@
-import Footer from "../components/ui/Footer";
-import TechUsed from "../components/ui/TechUsed";
+import Footer from "../../components/ui/Footer";
+import TechUsed from "../../components/ui/TechUsed";
 
 export default function About() {
   return (

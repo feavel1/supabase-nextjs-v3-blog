@@ -53,7 +53,7 @@ export default function Articles() {
         <div className="mt-5 space-y-1 w-24 mb-5 ">
           <button
             className="btn btn--primary"
-            onClick={() => router.push("/editPost?id=" + id)}
+            onClick={() => router.push("/posts/editPost?id=" + id)}
           >
             Edit
           </button>

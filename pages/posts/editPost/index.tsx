@@ -50,7 +50,7 @@ export default function EditPost() {
         .eq("id", id);
       if (error) throw error;
       setArticleData(initialState);
-      router.push("/article?id=" + id);
+      router.push("/posts?id=" + id);
     } catch (error: any) {
       alert(error.message);
     }
@@ -87,7 +87,7 @@ export default function EditPost() {
       <div>
         <button
           className="btn--third btn"
-          onClick={() => router.push("/article?id=" + id)}
+          onClick={() => router.push("/posts?id=" + id)}
         >
           返回
         </button>

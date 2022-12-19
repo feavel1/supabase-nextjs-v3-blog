@@ -1,4 +1,3 @@
-import { useUser } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/router";
 
 export default function ArticleCard(props: { article: any }) {
@@ -14,11 +13,11 @@ export default function ArticleCard(props: { article: any }) {
 
   return (
     <div
-      onClick={() => router.push("/article?id=" + article.id)}
-      className="mb-2 bg-neutral-500 w-full max-w-3xl p-2 rounded-lg hover:bg-neutral-600 transition ease-in-out delay-100"
+      onClick={() => router.push("/posts?id=" + article.id)}
+      className="bg-neutral-500 p-3 rounded-lg shadow-lg hover:bg-neutral-600 transition ease-in-out delay-100 pr-8"
     >
-      <h1 className="text-3xl mb-1">{article.title}</h1>
-      <span className="text-sm">日期: {getDate()}</span>
+      <h1 className="text-xl mb-1 truncate">{article.title}</h1>
+      <p className="text-sm">日期: {getDate()}</p>
       <p className="text-sm">作者: {article.user_email.toLowerCase()}</p>
     </div>
   );

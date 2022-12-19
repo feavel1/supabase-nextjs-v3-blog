@@ -1,6 +1,6 @@
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useState, useEffect } from "react";
-import ArticleCard from "./ui/ArticleCard";
+import BookCard from "./ui/BookCard";
 
 interface article {
   id: number;
@@ -8,7 +8,7 @@ interface article {
   user_email: string;
 }
 
-export default function Articles() {
+export default function Books() {
   const supabaseClient = useSupabaseClient();
   const [articles, setArticles] = useState<article[]>([]);
 
@@ -21,7 +21,7 @@ export default function Articles() {
       const { data, error } = await supabaseClient
         .from("articles")
         .select("*")
-        .limit(9);
+        .limit(4);
       if (error) throw error;
       if (data != null) {
         setArticles(data);
@@ -32,9 +32,9 @@ export default function Articles() {
   };
 
   return (
-    <div className="grid md:grid-cols-3 gap-2 w-full">
+    <div className="grid md:grid-cols-2 gap-2 w-full">
       {articles.map((article) => (
-        <ArticleCard key={article.id} article={article} />
+        <BookCard key={article.id} article={article} />
       ))}
     </div>
   );

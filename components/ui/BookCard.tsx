@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-export default function ArticleCard(props: { article: any }) {
+export default function BookCard(props: { article: any }) {
   const router = useRouter();
   const { article } = props;
 
@@ -14,7 +14,7 @@ export default function ArticleCard(props: { article: any }) {
   return (
     <div
       onClick={() => router.push("/posts?id=" + article.id)}
-      className="bg-neutral-500 p-3 rounded-sm shadow-lg hover:bg-neutral-600 transition ease-in-out delay-100 pr-8"
+      className="bg-zinc-500 p-3 rounded-sm shadow-lg hover:bg-zinc-600 transition ease-in-out delay-100 pr-8"
     >
       <h1 className="text-xl mb-1 truncate">{article.title}</h1>
       <p className="text-sm">

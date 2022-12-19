@@ -10,8 +10,8 @@ export default function Nav() {
   const router = useRouter();
 
   return (
-    <div className="bg-gray-100 font-sans w-full z-index-top">
-      <div className="bg-white shadow">
+    <div className="bg-neutral-800 font-sans w-full z-index-top">
+      <div className=" shadow">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-3">
             {/* <div>
@@ -29,7 +29,7 @@ export default function Nav() {
             <div className="hidden sm:flex sm:items-center">
               <Link
                 href="/"
-                className="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg bg-purple-100 hover:text-purple-600 hover:border-purple-600"
+                className="text-sm font-semibold border px-4 py-2 rounded-lg bg-purple-100 text-black hover:text-purple-600 hover:border-purple-600"
               >
                 主页
               </Link>
@@ -37,25 +37,25 @@ export default function Nav() {
             <div className="hidden sm:flex sm:items-center pl-5">
               <a
                 href="/suggested"
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
+                className="text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 推荐阅读
               </a>
               <a
                 href="#"
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
+                className="text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 文章购买
               </a>
               <a
                 href="#"
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
+                className="text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 合作伙伴
               </a>
               <Link
                 href="/about"
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
+                className="text-sm font-semibold hover:text-purple-600 mr-4"
               >
                 关于网站
               </Link>
@@ -64,7 +64,7 @@ export default function Nav() {
             <div className="hidden sm:flex sm:items-center">
               <Link
                 href="/my-account"
-                className="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600"
+                className="text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600"
               >
                 {!user ? "登录" : "账号"}
               </Link>
@@ -72,7 +72,7 @@ export default function Nav() {
             <div className="sm:hidden cursor-pointer">
               <Link
                 href="/"
-                className="text-gray-800 text-sm font-semibold border px-2 py-2 rounded-lg bg-purple-100 hover:text-purple-600 hover:border-purple-600"
+                className="text-sm font-semibold border px-2 py-2 rounded-lg bg-purple-100 hover:text-purple-600 hover:border-purple-600"
               >
                 主页
               </Link>
@@ -100,32 +100,32 @@ export default function Nav() {
               <div className="flex flex-col">
                 <a
                   href="#"
-                  className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1"
+                  className="text-sm font-semibold hover:text-purple-600 mb-1"
                 >
                   推荐阅读
                 </a>
                 <a
                   href="#"
-                  className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1"
+                  className="text-sm font-semibold hover:text-purple-600 mb-1"
                 >
                   文章购买
                 </a>
                 <a
                   href="#"
-                  className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1"
+                  className="text-sm font-semibold hover:text-purple-600 mb-1"
                 >
                   合作伙伴
                 </a>
                 <a
                   href="#"
-                  className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1"
+                  className="text-sm font-semibold hover:text-purple-600 mb-1"
                 >
                   关于网站
                 </a>
                 <div className="flex justify-between items-center border-t-2 pt-2">
                   <Link
                     href="/my-account"
-                    className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
+                    className="text-sm font-semibold hover:text-purple-600 mr-4"
                   >
                     登录
                   </Link>
